@@ -136,3 +136,25 @@ function tanta_zen_preprocess_comment(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
+
+
+/**
+ * Override all images alt and title attribute if empty
+ * 
+ * @param array $vars
+ */
+function tanta_zen_preprocess_image(&$vars) {
+  // alt
+  if (empty($vars['alt']) && !empty($vars['title'])) {
+    $vars['alt'] = $vars['title'];
+  }
+  // title
+  elseif (empty($vars['title']) && !empty($vars['alt'])) {
+    $vars['title'] =   $vars['alt'];
+  }
+  // both
+  elseif (empty($vars['title']) && empty($vars['alt'])){
+    $vars['alt'] = 'image title';
+    $vars['title'] = 'alt title';
+  }
+}
