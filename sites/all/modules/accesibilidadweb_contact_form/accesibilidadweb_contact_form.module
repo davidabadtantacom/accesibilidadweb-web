@@ -1,0 +1,179 @@
+<?php
+
+/**
+ * @file
+ * A block module that displays a contact form.
+ */
+
+/**
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path 
+ *   Which path of the site we're using to display help
+ * @param arg 
+ *   Array that holds the current path as returned from arg() function
+ */
+function accesibilidadweb_contact_form_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#accesibilidadweb_contact_form":
+      return t("Displays contact form"); 
+      break; 
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function accesibilidadweb_contact_form_theme($existing, $type, $theme, $path) {
+  return array(
+    'accesibilidadweb_contact_form_block' => array(
+      'variables' => array('title' => NULL, 'form' => NULL),
+      'path' => drupal_get_path('module', 'accesibilidadweb_contact_form') . '/templates/',
+      'template' => 'accesibilidadweb-contact-form-block'
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function accesibilidadweb_contact_form_block_info() {
+  $blocks['accesibilidadweb_contact_form'] = array(
+    // The name that will appear in the block list.
+    'info' => t('Accesibilidad Web Contact Form'),
+    // Default setting.
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function accesibilidadweb_contact_form_menu() {
+  $items['accesibilidadweb_contact_form'] = array(
+    'title' => 'Accesibilidad Web Contact Form',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('accesibilidadweb_contact_form'),
+    'access arguments' => array('access site-wide contact form'),
+    'access callback' => TRUE,
+    'type' => MENU_SUGGESTED_ITEM,
+  );
+}
+
+/**
+ * Implements hook_mail().
+ */
+function accesibilidadweb_contact_form_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'tanta_mail':
+      $message['subject'] .= t('Contact From Web');
+      $message['body'][] = t('Name: '.$params['name']);
+      $message['body'][] = t('Phone: '.$params['phone']);
+      $message['body'][] = t('Company: '.$params['company']);
+      $message['body'][] = t('Message: '.$params['message']);
+      break;
+  }
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function accesibilidadweb_contact_form_block_view($delta = '') {
+  $block = array();
+  if ('accesibilidadweb_contact_form' === $delta) {
+    $block['subject'] = t('Contact form');
+    $accesibilidadweb_contact_form = drupal_get_form('accesibilidadweb_contact_form');
+    $block['content'] = theme(
+      'accesibilidadweb_contact_form_block',
+      array(
+        'title' => $block['subject'],
+        'form' => render($accesibilidadweb_contact_form),
+      )
+    );
+  }
+  return $block;
+}
+
+/**
+ * Form constructor for accesibilidad web contact form
+ * 
+ * @see accesibilidadweb_contact_form_validate()
+ * @see accesibilidadweb_contact_form_submit()
+ */
+function accesibilidadweb_contact_form($form, &$form_state) {
+  // Provide a text field.
+  $form['name'] = array(
+    '#title' => t('Your full name'),
+    '#type' => 'textfield',
+    '#placeholder' => t('Your full name'),
+    '#required' => TRUE,
+  );
+  $form['email'] = array(
+    '#title' => t('Your email'),
+    '#type' => 'textfield',
+    '#required' => TRUE,
+    '#placeholder' => t('Your email'),
+  );
+  $form['phone'] = array(
+    '#title' => t('Your phone'),
+    '#type' => 'textfield',
+    '#required' => FALSE,
+    '#placeholder' => t('Your phone'),
+  );
+  $form['company'] = array(
+    '#title' => t('Your company'),
+    '#type' => 'textfield',
+    '#required' => FALSE,
+    '#placeholder' => t('Your company'),
+  );
+  $form['message'] = array(
+    '#title' => t('Your message'),
+    '#type' => 'textarea',
+    '#required' => FALSE,
+    '#placeholder' => t('Your message'),
+    '#required' => TRUE,
+  );
+  
+  // Provide a submit button.
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Send'),
+  );
+  
+  return $form;
+}
+
+/**
+ * Form validation handler for accesibilidadweb_contact_form().
+ *
+ * @see accesibilidadweb_contact_form_submit()
+ */
+function accesibilidadweb_contact_form_validate($form, &$form_state) {
+  if (!valid_email_address($form_state['values']['email'])) {
+    form_set_error('email', t('You must enter a valid e-mail address.'));
+  }
+}
+
+/**
+ * Form submission handler for accesibilidadweb_contact_form().
+ *
+ * @see accesibilidadweb_contact_form_validate()
+ */
+function accesibilidadweb_contact_form_submit($form, &$form_state) {
+  global $language;
+
+  $fields = array (
+    'name' => $form_state['values']['name'],
+    'email' => $form_state['values']['email'], 
+    'phone' => $form_state['values']['phone'],
+    'company' => $form_state['values']['company'],
+    'message' => $form_state['values']['message']
+  );
+
+  drupal_mail('accesibilidadweb_contact_form', 'tanta_mail', 'david.abad@tantacom.com', $language, $fields, 'customer.service@tantacom.com');
+
+  drupal_set_message(t('The form has been submitted.'));
+}
