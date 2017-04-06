@@ -69,11 +69,11 @@ function accesibilidadweb_contact_form_menu() {
 function accesibilidadweb_contact_form_mail($key, &$message, $params) {
   switch ($key) {
     case 'tanta_mail':
-      $message['subject'] .= t('Contact From Web');
-      $message['body'][] = t('Name: '.$params['name']);
-      $message['body'][] = t('Phone: '.$params['phone']);
-      $message['body'][] = t('Company: '.$params['company']);
-      $message['body'][] = t('Message: '.$params['message']);
+      $message['subject'] .= t('Contacto desde la accesibilidadweb.com');
+      $message['body'][] = t('Nombre: '.$params['name']);
+      $message['body'][] = t('Teléfono: '.$params['phone']);
+      $message['body'][] = t('Compañía: '.$params['company']);
+      $message['body'][] = t('Mensaje: '.$params['message']);
       break;
   }
 }
@@ -84,7 +84,7 @@ function accesibilidadweb_contact_form_mail($key, &$message, $params) {
 function accesibilidadweb_contact_form_block_view($delta = '') {
   $block = array();
   if ('accesibilidadweb_contact_form' === $delta) {
-    $block['subject'] = t('Contact form');
+    $block['subject'] = t('¿Qué necesitas?');
     $accesibilidadweb_contact_form = drupal_get_form('accesibilidadweb_contact_form');
     $block['content'] = theme(
       'accesibilidadweb_contact_form_block',
@@ -106,41 +106,47 @@ function accesibilidadweb_contact_form_block_view($delta = '') {
 function accesibilidadweb_contact_form($form, &$form_state) {
   // Provide a text field.
   $form['name'] = array(
-    '#title' => t('Your full name'),
     '#type' => 'textfield',
-    '#placeholder' => t('Your full name'),
     '#required' => TRUE,
+    '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu nombre')),
+    '#prefix' => '<div class="form-group">',
+    '#suffix' => '</div>',
   );
   $form['email'] = array(
-    '#title' => t('Your email'),
     '#type' => 'textfield',
     '#required' => TRUE,
-    '#placeholder' => t('Your email'),
+    '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu email')),
+    '#prefix' => '<div class="form-group">',
+    '#suffix' => '</div>',
   );
   $form['phone'] = array(
-    '#title' => t('Your phone'),
     '#type' => 'textfield',
     '#required' => FALSE,
-    '#placeholder' => t('Your phone'),
+    '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu teléfono')),
+    '#prefix' => '<div class="form-group">',
+    '#suffix' => '</div>',
   );
   $form['company'] = array(
-    '#title' => t('Your company'),
     '#type' => 'textfield',
     '#required' => FALSE,
-    '#placeholder' => t('Your company'),
+    '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu empresa')),
+    '#prefix' => '<div class="form-group">',
+    '#suffix' => '</div>',
   );
   $form['message'] = array(
-    '#title' => t('Your message'),
     '#type' => 'textarea',
     '#required' => FALSE,
-    '#placeholder' => t('Your message'),
     '#required' => TRUE,
+    '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu mensaje')),
+    '#prefix' => '<div class="form-group">',
+    '#suffix' => '</div>',
   );
   
   // Provide a submit button.
   $form['submit'] = array(
     '#type' => 'submit',
-    '#value' => t('Send'),
+    '#value' => t('Enviar'),
+    '#attributes' => array ('class' => array ('btn', 'btn-success', 'btn-block')),
   );
   
   return $form;
@@ -153,7 +159,7 @@ function accesibilidadweb_contact_form($form, &$form_state) {
  */
 function accesibilidadweb_contact_form_validate($form, &$form_state) {
   if (!valid_email_address($form_state['values']['email'])) {
-    form_set_error('email', t('You must enter a valid e-mail address.'));
+    form_set_error('email', t('Debe indicar un email váĺido.'));
   }
 }
 
@@ -175,5 +181,5 @@ function accesibilidadweb_contact_form_submit($form, &$form_state) {
 
   drupal_mail('accesibilidadweb_contact_form', 'tanta_mail', 'david.abad@tantacom.com', $language, $fields, 'customer.service@tantacom.com');
 
-  drupal_set_message(t('The form has been submitted.'));
+  drupal_set_message(t('El formulario ha sido enviado.'));
 }
