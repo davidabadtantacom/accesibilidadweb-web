@@ -1,9 +1,0 @@
-body{ width: 100%;  font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 11pt;  }
-
-ul li { list-style: disc  }
-
-#wrapper { width:auto; margin:0; padding:0;  border:0;    }
-
-#blog #header div, #blog #sidebar, #blog #navBar, #commentform, .postmetadata.alt, #content .navigation, #blog #footer, #respond { display:none }
-
-#blog #content { float:none; width:auto }

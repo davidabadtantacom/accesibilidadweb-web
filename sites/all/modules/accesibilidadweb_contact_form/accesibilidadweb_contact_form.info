@@ -1,0 +1,4 @@
+name = Accesibilidad Web Contact Form
+description = A block module that displays a contact form
+core = 7.x
+package = Accesibilidad Web Modules
