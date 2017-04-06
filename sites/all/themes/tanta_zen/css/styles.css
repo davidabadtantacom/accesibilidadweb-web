@@ -53,14 +53,12 @@ body.home main{padding: 0px !important;}
 .tabs{list-style-type: none;margin: 20px 0;padding-left: 0;text-align: center;}
   .tabs .tabs__tab{display: inline-block;padding: 0 10px;vertical-align: middle;}
     .tabs .tabs__tab.is-active{display: none;}
-/*
 .messages--warning, .messages--error, .messages--status{margin-top: 20px;text-align: center;}
 .messages--error{color: red;}
 .messages--status{color: green;}
 .messages--warning{color: orange;}
   .messages--warning .messages__icon, .messages--error .messages__icon, .messages--status .messages__icon{display: none;}
   .messages--warning .messages__list, .messages--error .messages__list, .messages--status .messages__list{list-style-type: none;text-align: center;}
-*/
 @media (max-width: 736px){
 	a.header__logo{margin-left: 15px;}
 	footer .block-menu{padding: 0px 15px;}
