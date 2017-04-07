@@ -44,6 +44,18 @@
     <script src="<?php print $base_path . $path_to_zen; ?>/js/html5shiv.min.js"></script>
     <![endif]-->
   <?php endif; ?>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "http://accesibilidadweb.com",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+34 91 440 10 40",
+      "contactType": "customer service"
+    }]
+  }
+  </script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php if ($skip_link_text && $skip_link_anchor): ?>
