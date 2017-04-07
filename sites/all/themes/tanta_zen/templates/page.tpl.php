@@ -6,6 +6,7 @@
  */
 ?>
 
+<a id="main-content"></a>
 <header class="navbar navbar-default nav-principal">
   <div class="container fullwidth">
     <div class="navbar-header">
