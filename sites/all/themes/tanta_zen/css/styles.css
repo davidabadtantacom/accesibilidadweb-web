@@ -48,7 +48,7 @@ body.home main{padding: 0px !important;}
   .sidebar_first .view-id-entradas_recientes ul{list-style: none;padding-left: 0;}
     .sidebar_first .view-id-entradas_recientes ul li{margin-bottom: 5px;}
   .sidebar_first .view-id-lista_categorias ul{list-style: none;padding-left: 0;}
-      .sidebar_first .view-id-lista_categorias ul li h2{font-size: 14px;font-weight: normal;text-transform: capitalize;}
+    .sidebar_first .view-id-lista_categorias ul li{margin-bottom: 5px;}
 #user-login label, #user-register-form label, #user-pass label{display: none;}
 .tabs{list-style-type: none;margin: 20px 0;padding-left: 0;text-align: center;}
   .tabs .tabs__tab{display: inline-block;padding: 0 10px;vertical-align: middle;}
