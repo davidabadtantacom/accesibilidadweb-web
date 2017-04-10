@@ -219,7 +219,7 @@ function addtoany_page_alter(&$page) {
 
   $page['content']['#attached']['js'][] = array(
     'data'  => $javascript_footer,
-    'scope' => 'footer',
+    'scope' => 'header',
     'type'  => 'inline',
   );
 
