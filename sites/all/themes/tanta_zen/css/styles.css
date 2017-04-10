@@ -59,6 +59,7 @@ body.home main{padding: 0px !important;}
 .messages--warning{color: orange;}
   .messages--warning .messages__icon, .messages--error .messages__icon, .messages--status .messages__icon{display: none;}
   .messages--warning .messages__list, .messages--error .messages__list, .messages--status .messages__list{list-style-type: none;text-align: center;}
+.addtoany_list{display: block;padding: 20px 0;}
 @media (max-width: 736px){
 	a.header__logo{margin-left: 15px;}
 	footer .block-menu{padding: 0px 15px;}
