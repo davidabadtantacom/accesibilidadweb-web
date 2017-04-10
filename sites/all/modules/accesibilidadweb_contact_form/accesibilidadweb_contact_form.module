@@ -111,6 +111,7 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu nombre')),
     '#prefix' => '<div class="form-group">',
     '#suffix' => '</div>',
+    '#title' => t('Tu nombre'),
   );
   $form['email'] = array(
     '#type' => 'textfield',
@@ -118,6 +119,7 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu email')),
     '#prefix' => '<div class="form-group">',
     '#suffix' => '</div>',
+    '#title' => t('Tu email'),
   );
   $form['phone'] = array(
     '#type' => 'textfield',
@@ -125,6 +127,7 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu teléfono')),
     '#prefix' => '<div class="form-group">',
     '#suffix' => '</div>',
+    '#title' => t('Tu teléfono'),
   );
   $form['company'] = array(
     '#type' => 'textfield',
@@ -132,6 +135,7 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu empresa')),
     '#prefix' => '<div class="form-group">',
     '#suffix' => '</div>',
+    '#title' => t('Tu empresa'),
   );
   $form['message'] = array(
     '#type' => 'textarea',
@@ -140,6 +144,7 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu mensaje')),
     '#prefix' => '<div class="form-group">',
     '#suffix' => '</div>',
+    '#title' => t('Tu teléfono'),
   );
   
   // Provide a submit button.
