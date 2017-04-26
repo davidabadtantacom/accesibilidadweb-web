@@ -40,12 +40,11 @@ body.home main{padding: 0px !important;}
     #panel-portada .pane-promo-home .promo{position: relative;}
       #panel-portada .pane-promo-home .promo .view-promo-home img{height: auto;max-width: 100%;}
       #panel-portada .pane-promo-home .promo img{max-width: 100%;}
-      #panel-portada .pane-promo-home .promo h2{font-size: 40px;left: 0;position: absolute;top: 100px;width: 50%;}
-        #panel-portada .pane-promo-home .promo h2 a{color: white;display: block;font-weight: bold;margin: 0 150px 0 200px;text-decoration: none;width: 350px;}
-      #panel-portada .pane-promo-home .promo h3{font-size: 25px;left: 0;margin: 0 150px 0 200px;position: absolute;top: 220px;width: 50%;}
-        #panel-portada .pane-promo-home .promo h3 a{color: white;display: block;text-decoration: none;width: 350px;}
-      #panel-portada .pane-promo-home .promo .listaEnlaces{position: absolute;right: 0;top: 100px;width: 50%;}
-        #panel-portada .pane-promo-home .promo .listaEnlaces a{background-color: white;border-radius: 6px;color: #1c1cb2;display: block;font-size: 20px;margin: 0px 200px 20px 150px;padding: 5px 20px;text-align: center;text-decoration: none;width: auto;}
+      #panel-portada .pane-promo-home .promo h2{margin: 0;}
+        #panel-portada .pane-promo-home .promo h2 a{color: white;display: block;font-weight: bold;text-decoration: none;}
+      #panel-portada .pane-promo-home .promo h3{margin: 0;}
+      #panel-portada .pane-promo-home .promo h3 a{color: white;display: block;text-decoration: none;}
+      #panel-portada .pane-promo-home .promo .listaEnlaces a{background-color: white;border-radius: 6px;color: #1c1cb2;display: block;font-size: 20px;margin: 0px 15% 20px 15%;padding: 5px 20px;text-align: center;text-decoration: none;width: auto;}
   #panel-portada .pane-promociones{padding-bottom: 60px;}
     #panel-portada .pane-promociones .field-name-field-promo-image{margin-bottom: 30px;text-align: center;}
       #panel-portada .pane-promociones .field-name-field-promo-image img{height: auto;max-width: 100px;text-align: center;}
@@ -54,7 +53,7 @@ body.home main{padding: 0px !important;}
   #panel-portada .pane-entradas-recientes{background-color: #efefef;padding: 60px 0;}
     #panel-portada .pane-entradas-recientes h2{margin: 0 0 30px 0;text-align: center;}
       #panel-portada .pane-entradas-recientes .entrada .views-field-field-featured-image{margin-bottom: 20px;}
-        #panel-portada .pane-entradas-recientes .entrada .views-field-field-featured-image img{max-height: 200px;max-width: 100%;}
+        #panel-portada .pane-entradas-recientes .entrada .views-field-field-featured-image img{max-height: 200px;max-width: 100%;width: auto;}
       #panel-portada .pane-entradas-recientes .entrada .views-field-title{background-color: white;padding: 20px;}
       #panel-portada .pane-entradas-recientes .entrada .views-field-title h3{font-size: 20px;margin: 0 auto;width: 90%;}
         #panel-portada .pane-entradas-recientes .entrada .views-field-title h3 a{color: black;text-decoration: none;}
@@ -96,6 +95,12 @@ body.home main{padding: 0px !important;}
 @media (max-width: 768px){
 	#panel-portada *{text-align: center;}
 		#panel-portada .destacado{margin-bottom: 40px;}
+    #panel-portada .destacado:last-child{margin-bottom: 0;}
+    #panel-portada .pane-promo-home .promo {background-color: #404044;padding: 60px 0;}
+      #panel-portada .pane-promo-home .promo .imagen{display: none;}
+      #panel-portada .pane-promo-home .promo h2{margin-bottom: 30px;}
+      #panel-portada .pane-promo-home .promo h3{margin-bottom: 30px;}
+    #panel-portada .pane-promociones .field-name-node-link a{margin: 0 auto;width: 50%;}
 	#block-block-1 p{padding: 60px 0;}
   .sidebar_first{padding: 60px 15px;}
 	.region-bottom .block-menu *{text-align: center;}
@@ -116,4 +121,9 @@ body.home main{padding: 0px !important;}
 @media (min-width: 1024px){
 	.region-bottom .block-menu{padding: 60px 15px;}
 	#block-block-1 p{padding-bottom: 30px;}
+  #panel-portada .pane-promo-home .promo h2{font-size: 40px;left: 0;margin: 0;position: absolute;top: 100px;width: 50%;}
+    #panel-portada .pane-promo-home .promo h2 a{margin: 0 15% 0 auto;width: 350px;}
+  #panel-portada .pane-promo-home .promo h3{font-size: 25px;left: 0;margin: 0;position: absolute;top: 200px;width: 50%;}
+      #panel-portada .pane-promo-home .promo h3 a{margin: 0 15% 0 auto;width: 350px;}
+  #panel-portada .pane-promo-home .promo .listaEnlaces{position: absolute;right: 0;top: 100px;width: 50%;}
 }
