@@ -38,8 +38,6 @@ body.home main{padding: 0px !important;}
 #panel-portada{background-color: white}
   #panel-portada .pane-promo-home{padding-bottom: 60px;}
     #panel-portada .pane-promo-home .promo{position: relative;}
-      #panel-portada .pane-promo-home .promo .view-promo-home img{height: auto;max-width: 100%;}
-      #panel-portada .pane-promo-home .promo img{max-width: 100%;}
       #panel-portada .pane-promo-home .promo h1{margin: 0;}
         #panel-portada .pane-promo-home .promo h1 a{color: white;display: block;font-weight: bold;text-decoration: none;}
       #panel-portada .pane-promo-home .promo h2{margin: 0;}
@@ -52,7 +50,7 @@ body.home main{padding: 0px !important;}
     #panel-portada .pane-promociones .field-name-node-link a{background-color: #1c1cb2;border-radius: 6px;color: white;display: block;font-weight: bold;padding: 5px 0;text-align: center;text-decoration: none;}
   #panel-portada .pane-entradas-recientes{background-color: #efefef;padding: 60px 0;}
     #panel-portada .pane-entradas-recientes h2{margin: 0 0 30px 0;text-align: center;}
-      #panel-portada .pane-entradas-recientes .entrada .views-field-field-featured-image{margin-bottom: 20px;}
+      #panel-portada .pane-entradas-recientes .entrada .views-field-field-featured-image{margin-bottom: 20px;text-align: center;}
         #panel-portada .pane-entradas-recientes .entrada .views-field-field-featured-image img{max-height: 200px;max-width: 100%;width: auto;}
       #panel-portada .pane-entradas-recientes .entrada .views-field-title{background-color: white;padding: 20px;}
       #panel-portada .pane-entradas-recientes .entrada .views-field-title h3{font-size: 20px;margin: 0 auto;width: 90%;}
@@ -123,9 +121,11 @@ body.home main{padding: 0px !important;}
 @media (min-width: 1024px){
 	.region-bottom .block-menu{padding: 60px 15px;}
 	#block-block-1 p{padding-bottom: 30px;}
+  #panel-portada .pane-promo-home .promo .imagen img{height: auto;max-width: 100%;width: 100%;}
   #panel-portada .pane-promo-home .promo h1{font-size: 40px;left: 0;margin: 0;position: absolute;top: 100px;width: 50%;}
     #panel-portada .pane-promo-home .promo h1 a{margin: 0 15% 0 auto;width: 350px;}
   #panel-portada .pane-promo-home .promo h2{font-size: 25px;left: 0;margin: 0;position: absolute;top: 200px;width: 50%;}
       #panel-portada .pane-promo-home .promo h2 a{margin: 0 15% 0 auto;width: 350px;}
   #panel-portada .pane-promo-home .promo .listaEnlaces{position: absolute;right: 0;top: 100px;width: 50%;}
+  #panel-portada .pane-promociones .destacado .node-teaser{padding-left: 10px;padding-right: 10px;}
 }
