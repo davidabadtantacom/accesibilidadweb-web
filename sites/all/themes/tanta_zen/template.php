@@ -197,6 +197,7 @@ function tanta_zen_menu_tree__main_menu($variables) {
  * @param array $javascript  The javascript
  */
 function eu_cookie_compliance_js_alter(&$javascript) {
+  $javascript['sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js']['group'] = JS_DEFAULT;
   $javascript['sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js']['scope'] = 'header';
 }
 
