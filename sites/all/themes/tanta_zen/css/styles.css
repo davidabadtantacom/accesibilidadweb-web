@@ -94,13 +94,15 @@ body.home main{padding: 0px !important;}
 }
 @media (max-width: 768px){
 	#panel-portada *{text-align: center;}
-		#panel-portada .destacado{margin-bottom: 40px;}
-    #panel-portada .destacado:last-child{margin-bottom: 0;}
     #panel-portada .pane-promo-home .promo {background-color: #404044;padding: 60px 0;}
       #panel-portada .pane-promo-home .promo .imagen{display: none;}
       #panel-portada .pane-promo-home .promo h2{margin-bottom: 30px;}
       #panel-portada .pane-promo-home .promo h3{margin-bottom: 30px;}
-    #panel-portada .pane-promociones .field-name-node-link a{margin: 0 auto;width: 50%;}
+    #panel-portada .pane-promociones .destacado{margin-bottom: 40px;}
+    #panel-portada .pane-promociones .destacado:last-child{margin-bottom: 0;}
+      #panel-portada .pane-promociones .destacado .field-name-node-link a{margin: 0 auto;width: 50%;}
+    #panel-portada .pane-entradas-recientes .entrada{margin-bottom: 40px;}
+    #panel-portada .pane-entradas-recientes .entrada:last-child{margin-bottom: 0;}
 	#block-block-1 p{padding: 60px 0;}
   .sidebar_first{padding: 60px 15px;}
 	.region-bottom .block-menu *{text-align: center;}
