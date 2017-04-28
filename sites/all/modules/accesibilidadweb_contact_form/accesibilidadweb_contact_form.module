@@ -112,6 +112,9 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#prefix' => '<div class="form-group">',
     '#suffix' => '</div>',
     '#title' => t('Tu nombre'),
+    '#validate' => array(
+      'required' => array(true),
+    ),
   );
   $form['email'] = array(
     '#type' => 'textfield',
@@ -120,6 +123,10 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#prefix' => '<div class="form-group">',
     '#suffix' => '</div>',
     '#title' => t('Tu email'),
+    '#validate' => array(
+      'email' => array(true),
+      'required' => array(true),
+    ),
   );
   $form['phone'] = array(
     '#type' => 'textfield',
@@ -128,6 +135,9 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#prefix' => '<div class="form-group">',
     '#suffix' => '</div>',
     '#title' => t('Tu teléfono'),
+    '#validate' => array(
+      'minlength' => array(9)
+    ),
   );
   $form['company'] = array(
     '#type' => 'textfield',
@@ -144,7 +154,10 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#attributes' => array ('class' => array ('form-control'), 'placeholder' => t('Tu mensaje')),
     '#prefix' => '<div class="form-group">',
     '#suffix' => '</div>',
-    '#title' => t('Tu teléfono'),
+    '#title' => t('Tu mensaje'),
+    '#validate' => array(
+      'required' => array(true),
+    ),
   );
   
   // Provide a submit button.
@@ -153,6 +166,8 @@ function accesibilidadweb_contact_form($form, &$form_state) {
     '#value' => t('Enviar'),
     '#attributes' => array ('class' => array ('btn', 'btn-success', 'btn-block')),
   );
+
+  $form['#client_validation'] = TRUE;
   
   return $form;
 }

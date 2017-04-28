@@ -85,6 +85,8 @@ body.home main{padding: 0px !important;}
 .region-bottom .block-menu ul{list-style: none;margin: 0;padding: 0;}
   .region-bottom .block-menu ul li{line-height: 25px;}
     .region-bottom .block-menu ul li a{color: #00aee4;text-decoration: none;}
+form input.error, form textarea.error{border: 1px solid red;}
+form label.error{color: red;display: block;margin-top: 10px;text-align: right;}
 @media (max-width: 736px){
 	a.header__logo{margin-left: 15px;}
 	.region-bottom .block-menu{padding: 0px 15px;}
