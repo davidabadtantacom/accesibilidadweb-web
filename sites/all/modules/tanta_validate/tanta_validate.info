@@ -1,0 +1,11 @@
+name = "Tanta Validate"
+description = "Use jQuery tanta validate plugin to do client-side form validation."
+core = 6.x
+project = "tanta_validate"
+version = "6.x-0.1"
+; Information added by drupal.org packaging script on 2012-01-17
+version = "7.x-1.0"
+core = "7.x"
+project = "tanta_validate"
+datestamp = "1493307890"
+
