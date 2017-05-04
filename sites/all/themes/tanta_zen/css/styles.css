@@ -1,20 +1,22 @@
 body{background-color: #f5f5f5;}
 a, a:visited, a:hover, a:focus{color: #133fb7;}
 a:hover{text-decoration: underline;}
-header.nav-principal{background-color: transparent;border: none;margin-bottom: 10px;}
-	header.nav-principal .navbar-header .header__logo .header__logo-image{max-width: 200px;}
+header.nav-principal{background-color: transparent;border: none;margin: 10px 20px;}
+  header.nav-principal .navbar-header .header__logo .header__logo-image{max-width: 200px;}
 	header.nav-principal .navbar-default .navbar-toggle{border: none;}
 		header.nav-principal .navbar-default .navbar-toggle .icon-bar{background-color: red;}
-  header.nav-principal #tt-navbar .menu{padding: 10px 0;}
-	header.nav-principal #tt-navbar .menu__item a{color: black;text-transform: uppercase;}
-    header.nav-principal #tt-navbar .menu__item a:hover{text-decoration: underline;}
-		header.nav-principal #tt-navbar .menu__item a.active{font-weight: bold;text-decoration: underline;}
+  header.nav-principal #tt-navbar .menu{bottom: 0;position: absolute;right: 0;}
+	 header.nav-principal #tt-navbar .menu .menu__item a{color: black;padding-bottom: 0;padding-top: 0;text-transform: uppercase;}
+      header.nav-principal #tt-navbar .menu .menu__item a:hover{text-decoration: underline;}
+		  header.nav-principal #tt-navbar .menu .menu__item a.active{font-weight: bold;text-decoration: underline;}
 main{padding: 0;}
   main h1{margin-top: 0;}
+.node-type-post.page-node main, .node-type-page-completed.page-node main, .page-blog main{padding: 60px 0;}
+  .page-blog main h2, .node-type-page-completed.page-node main h2{margin-bottom: 30px;}
 footer .block-accesibilidadweb-contact-form{background-color: #d0d0d0;padding: 60px 0;}
 body.home main{padding: 0px !important;}
 .visually-hidden{display: none;}
-.block-accesibilidadweb-contact-form h2{text-align: center;}
+.block-accesibilidadweb-contact-form h2{margin-top: 0;text-align: center;}
 .block-accesibilidadweb-contact-form .form-wrapper{margin-top: 20px;}
 .node-post .links.inline{list-style: none;padding-left: 0;}
 .element-invisible{display: none;}
@@ -46,7 +48,8 @@ body.home main{padding: 0px !important;}
   #panel-portada .pane-promociones{padding-bottom: 60px;}
     #panel-portada .pane-promociones .field-name-field-promo-image{margin-bottom: 30px;text-align: center;}
       #panel-portada .pane-promociones .field-name-field-promo-image img{height: auto;max-width: 100px;text-align: center;}
-    #panel-portada .pane-promociones .field-name-title a{color: #1c1cb2;text-decoration: none;}
+      #panel-portada .pane-promociones .field-name-title{text-align: center;}
+      #panel-portada .pane-promociones .field-name-title a{color: #1c1cb2;text-decoration: none;}
     #panel-portada .pane-promociones .field-name-node-link a{background-color: #1c1cb2;border-radius: 6px;color: white;display: block;font-weight: bold;padding: 5px 0;text-align: center;text-decoration: none;}
   #panel-portada .pane-entradas-recientes{background-color: #efefef;padding: 60px 0;}
     #panel-portada .pane-entradas-recientes h2{margin: 0 0 30px 0;text-align: center;}
@@ -129,5 +132,6 @@ form label.error{color: red;display: block;margin-top: 10px;text-align: right;}
   #panel-portada .pane-promo-home .promo h2{font-size: 25px;left: 0;margin: 0;position: absolute;top: 200px;width: 50%;}
       #panel-portada .pane-promo-home .promo h2 a{margin: 0 15% 0 auto;width: 350px;}
   #panel-portada .pane-promo-home .promo .listaEnlaces{position: absolute;right: 0;top: 100px;width: 50%;}
-  #panel-portada .pane-promociones .destacado .node-teaser{padding-left: 10px;padding-right: 10px;}
+  #panel-portada .pane-promociones .destacado{padding: 0 60px;}
+  #panel-portada .pane-entradas-recientes .entrada{padding: 0 40px;}
 }
