@@ -188,7 +188,7 @@ function tanta_zen_preprocess_image(&$vars) {
  */
 function tanta_zen_menu_tree__main_menu($variables) {
   $menu_type = str_replace('menu_tree__menu_', '', $variables['theme_hook_original']);  
-  return '<ul class="menu ' . str_replace(array('_', ' '), '-', strtolower($menu_type)) . '-menu nav navbar-nav navbar-right">' . $variables['tree'] . '</ul>';
+  return '<ul class="menu ' . str_replace(array('_', ' '), '-', strtolower($menu_type)) . '-menu nav navbar-nav">' . $variables['tree'] . '</ul>';
 }
 
 /**
