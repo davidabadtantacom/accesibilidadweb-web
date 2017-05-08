@@ -1,18 +1,18 @@
 body{background-color: #f5f5f5;}
 a, a:visited, a:hover, a:focus{color: #133fb7;}
 a:hover{text-decoration: underline;}
-header.nav-principal{background-color: transparent;border: none;margin: 10px 20px;}
+header.nav-principal{background-color: transparent;border-radius: 0;border: none;border-bottom: 1px solid black;padding: 10px 20px;}
+body.front header.nav-principal{border-bottom: none;}
   header.nav-principal .navbar-header .header__logo .header__logo-image{max-width: 200px;}
-	header.nav-principal .navbar-default .navbar-toggle{border: none;}
-		header.nav-principal .navbar-default .navbar-toggle .icon-bar{background-color: red;}
-  header.nav-principal #tt-navbar .menu{bottom: 0;position: absolute;right: 0;}
-	 header.nav-principal #tt-navbar .menu .menu__item a{color: black;padding-bottom: 0;padding-top: 0;text-transform: uppercase;}
+  header.nav-principal .navbar-default .navbar-toggle{border: none;}
+    header.nav-principal .navbar-default .navbar-toggle .icon-bar{background-color: red;}
+  header.nav-principal #tt-navbar .menu{bottom: 10px;position: absolute;right: 20px;}
+   header.nav-principal #tt-navbar .menu .menu__item a{color: black;padding-bottom: 0;padding-top: 0;text-transform: uppercase;}
       header.nav-principal #tt-navbar .menu .menu__item a:hover{text-decoration: underline;}
-		  header.nav-principal #tt-navbar .menu .menu__item a.active{font-weight: bold;text-decoration: underline;}
+      header.nav-principal #tt-navbar .menu .menu__item a.active{font-weight: bold;text-decoration: none;}
 main{padding: 0;}
   main h1{margin-top: 0;}
-.node-type-post.page-node main, .node-type-page-completed.page-node main, .page-blog main{padding: 60px 0;}
-  .page-blog main h2, .node-type-page-completed.page-node main h2{margin-bottom: 30px;}
+.page-blog main h2, .node-type-page-completed.page-node main h2{margin-bottom: 30px;}
 footer .block-accesibilidadweb-contact-form{background-color: #d0d0d0;padding: 60px 0;}
 body.home main{padding: 0px !important;}
 .visually-hidden{display: none;}
@@ -64,7 +64,8 @@ body.home main{padding: 0px !important;}
 	.search-results.node-results li{background-color: white;padding: 20px;}
 		.search-results.node-results li .title{font-size: 30px;}
 .sidebar_first{padding: 60px 0 60px 20px;}
-  .sidebar_first h2{font-size: 16px;font-weight: bold;text-transform: uppercase;}
+  .sidebar_first .block-views{background-color: #ededed;border-radius: 6px;margin-bottom: 30px;padding: 30px 20px;}
+  .sidebar_first h2{font-size: 16px;font-weight: bold;margin-top: 0px;text-transform: uppercase;}
   .sidebar_first .block-search{padding-bottom: 20px;}
     .sidebar_first .block-search input[type=submit]{display: none;}
     .sidebar_first .block-search input[type=text]{border: 1px solid #ccc;font-size: 13px;height: 37px;padding-left: 20px;width: 100%;}
@@ -124,14 +125,15 @@ form label.error{color: red;display: block;margin-top: 10px;text-align: right;}
 }
 
 @media (min-width: 1024px){
+  .node-type-post.page-node main, .node-type-page-completed.page-node main, .page-blog main{padding: 60px 0;padding-right: 70px;}
 	.region-bottom .block-menu{padding: 60px 15px;}
 	#block-block-1 p{padding-bottom: 30px;}
   #panel-portada .pane-promo-home .promo .imagen img{height: auto;max-width: 100%;width: 100%;}
-  #panel-portada .pane-promo-home .promo h1{font-size: 40px;left: 0;margin: 0;position: absolute;top: 100px;width: 50%;}
+  #panel-portada .pane-promo-home .promo h1{font-size: 40px;left: 0;margin: 0;position: absolute;top: 20%;width: 50%;}
     #panel-portada .pane-promo-home .promo h1 a{margin: 0 15% 0 auto;width: 350px;}
-  #panel-portada .pane-promo-home .promo h2{font-size: 25px;left: 0;margin: 0;position: absolute;top: 200px;width: 50%;}
+  #panel-portada .pane-promo-home .promo h2{font-size: 25px;left: 0;margin: 0;position: absolute;top: 55%;width: 50%;}
       #panel-portada .pane-promo-home .promo h2 a{margin: 0 15% 0 auto;width: 350px;}
-  #panel-portada .pane-promo-home .promo .listaEnlaces{position: absolute;right: 0;top: 100px;width: 50%;}
+  #panel-portada .pane-promo-home .promo .listaEnlaces{position: absolute;right: 0;top: 20%;width: 50%;}
   #panel-portada .pane-promociones .destacado{padding: 0 60px;}
   #panel-portada .pane-entradas-recientes .entrada{padding: 0 40px;}
 }
