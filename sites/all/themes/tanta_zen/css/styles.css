@@ -34,7 +34,7 @@ body.home main{padding: 0px !important;}
 	.node-post .field-name-field-tags .field-items .field-item{padding: 0 4px;}
 .node-page-completed.node-teaser .field-name-field-promo-image{margin-bottom: 10px;}
 	.node-page-completed.node-teaser .field-name-field-promo-image img{height: auto;max-width: 100%;}
-.form-control{font-size: 20px;height: auto;line-height: 25px;padding: 12px}
+.form-control{font-size: 16px;height: auto;line-height: 20px;padding: 12px}
 .btn{font-size: 20px;padding: 12px;}
 .fullwidth{width: auto;}
 #panel-portada{background-color: white}
