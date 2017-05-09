@@ -6,13 +6,12 @@ body.front header.nav-principal{border-bottom: none;}
   header.nav-principal .navbar-header .header__logo .header__logo-image{max-width: 200px;}
   header.nav-principal .navbar-default .navbar-toggle{border: none;}
     header.nav-principal .navbar-default .navbar-toggle .icon-bar{background-color: red;}
-  header.nav-principal #tt-navbar .menu{bottom: 10px;position: absolute;right: 20px;}
-   header.nav-principal #tt-navbar .menu .menu__item a{color: black;padding-bottom: 0;padding-top: 0;text-transform: uppercase;}
-      header.nav-principal #tt-navbar .menu .menu__item a:hover{text-decoration: underline;}
-      header.nav-principal #tt-navbar .menu .menu__item a.active{font-weight: bold;text-decoration: none;}
+ header.nav-principal #tt-navbar .menu .menu__item a{color: black;padding-bottom: 0;padding-top: 0;text-transform: uppercase;}
+    header.nav-principal #tt-navbar .menu .menu__item a:hover{text-decoration: underline;}
+    header.nav-principal #tt-navbar .menu .menu__item a.active{font-weight: bold;text-decoration: none;}
 main{padding: 0;}
   main h1{margin-bottom: 30px;margin-top: 0;}
-.page-blog main h2, .node-type-page-completed.page-node main h2{font-size: 26px;margin-bottom: 20px;margin-top: 30px;}
+.page-blog main h2, .node-type-page-completed.page-node main h2, .section-post h2{font-size: 26px;margin-bottom: 20px;margin-top: 30px;}
 footer .block-accesibilidadweb-contact-form{background-color: #d0d0d0;padding: 60px 0;}
 body.home main{padding: 0px !important;}
 .visually-hidden{display: none;}
@@ -136,4 +135,8 @@ form label.error{color: red;display: block;margin-top: 10px;text-align: right;}
   #panel-portada .pane-promo-home .promo .listaEnlaces{position: absolute;right: 0;top: 20%;width: 50%;}
   #panel-portada .pane-promociones .destacado{padding: 0 60px;}
   #panel-portada .pane-entradas-recientes .entrada{padding: 0 40px;}
+}
+
+@media (min-width: 1025px){
+  header.nav-principal #tt-navbar .menu{bottom: 10px;position: absolute;right: 20px;}
 }
