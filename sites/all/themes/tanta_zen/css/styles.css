@@ -38,7 +38,7 @@ body.home main{padding: 0px !important;}
 .fullwidth{width: auto;}
 #panel-portada{background-color: white}
   #panel-portada .pane-promo-home{padding-bottom: 60px;}
-    #panel-portada .pane-promo-home .promo{position: relative;}
+    #panel-portada .pane-promo-home .promo{background-color: rgb(65, 65, 69);min-height: 416px;position: relative;}
       #panel-portada .pane-promo-home .promo h1{margin: 0;}
         #panel-portada .pane-promo-home .promo h1 a{color: white;display: block;font-weight: bold;text-decoration: none;}
       #panel-portada .pane-promo-home .promo h2{margin: 0;}
@@ -87,7 +87,7 @@ body.home main{padding: 0px !important;}
 .region-bottom .block-menu h2{font-size: 2rem;}
 .region-bottom .block-menu ul{list-style: none;margin: 0;padding: 0;}
   .region-bottom .block-menu ul li{line-height: 25px;}
-    .region-bottom .block-menu ul li a{color: #00aee4;text-decoration: none;}
+    .region-bottom .block-menu ul li a{color: #1c1cb2;text-decoration: none;}
 form input.error, form textarea.error{border: 1px solid red;}
 form label.error{color: red;display: block;margin-top: 10px;text-align: right;}
 @media (max-width: 736px){
