@@ -71,7 +71,8 @@
         .animate({top: 0}, Drupal.settings.eu_cookie_compliance.popup_delay);
     } else {
       popup.appendTo("body");
-      height = popup.height();
+// Peta con esta linea descomentada. Asi que...
+//      height = popup.height();
       popup.show()
         .attr({"class": "sliding-popup-bottom"})
         .css({"bottom": -1 * height})
