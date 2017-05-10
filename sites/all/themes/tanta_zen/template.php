@@ -191,17 +191,6 @@ function tanta_zen_menu_tree__main_menu($variables) {
   return '<ul class="menu ' . str_replace(array('_', ' '), '-', strtolower($menu_type)) . '-menu nav navbar-nav">' . $variables['tree'] . '</ul>';
 }
 
-/**
- * hook_js_alter for replacing jquery eu_cookie_compliance js call
- *
- * @param array $javascript  The javascript
- */
-function eu_cookie_compliance_js_alter(&$javascript) {
-  $javascript['sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js']['group'] = JS_DEFAULT;
-  $javascript['sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js']['scope'] = 'header';
-}
-
-
 function tanta_zen_form_alter(&$form, $form_state, $form_id) {
   if ( $form['#form_id'] == 'user_login' ) {
     // Form
