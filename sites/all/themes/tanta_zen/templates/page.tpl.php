@@ -7,6 +7,7 @@
 ?>
 
 <a id="main-content"></a>
+<a id="top"></a>
 <header class="navbar navbar-default nav-principal">
   <div class="container fullwidth">
     <div class="navbar-header">
@@ -17,6 +18,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <span class="visually-hidden">Menú</span>
       </button>
     </div>
     <nav class="collapse navbar-collapse" id="tt-navbar">
