@@ -14,6 +14,7 @@ main{padding: 0;}
 .page-blog main h2, .node-type-page-completed.page-node main h2, .section-post h2{font-size: 26px;margin-bottom: 20px;margin-top: 30px;}
 footer .block-accesibilidadweb-contact-form{background-color: #d0d0d0;padding: 60px 0;}
 body.home main{padding: 0px !important;}
+article.comment{border-bottom: 1px solid #b0b0b0;margin: 10px 0;padding: 10px 0;}
 .visually-hidden{display: none;}
 .block-accesibilidadweb-contact-form h2{margin-top: 0;text-align: center;}
 .block-accesibilidadweb-contact-form .form-wrapper{margin-top: 20px;}
