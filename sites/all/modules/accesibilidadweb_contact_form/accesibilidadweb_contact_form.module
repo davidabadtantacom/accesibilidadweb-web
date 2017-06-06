@@ -71,6 +71,7 @@ function accesibilidadweb_contact_form_mail($key, &$message, $params) {
     case 'tanta_mail':
       $message['subject'] .= t('Contacto desde la accesibilidadweb.com');
       $message['body'][] = t('Nombre: '.$params['name']);
+      $message['body'][] = t('Email: '.$params['email']);
       $message['body'][] = t('Teléfono: '.$params['phone']);
       $message['body'][] = t('Compañía: '.$params['company']);
       $message['body'][] = t('Mensaje: '.$params['message']);
