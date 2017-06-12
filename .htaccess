@@ -151,3 +151,34 @@ DirectoryIndex index.php index.html index.htm
 # Fix Libwww-perl Access
 RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
 RewriteRule .* ? [F,L]
+
+# 301 Redirect
+Redirect 301 /accesibilidad_web.php /sobre-accesibilidad-web
+Redirect 301 /adecuacion_accesibilidad_web.php /desarrollo-y-adecuacion
+Redirect 301 /auditoria_accesibilidad_web.php /auditoria
+Redirect 301 /experiencia_accesibilidad_web.php /clientes
+Redirect 301 /formacion_accesibilidad_web.php /formacion
+Redirect 301 /tanta_comunicacion.php /contacto
+Redirect 301 /accesibilidad.php /
+Redirect 301 /aviso_legal.php /aviso-legal
+
+# 301 RedirectMatch
+RedirectMatch 301 ^/blog/index.php/category/(.*)$ /category/$1
+RedirectMatch 301 ^/blog/index.php/([0-9]{4})/([0-9]{2})$ /blog
+RedirectMatch 301 ^/blog/index.php/android/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/aplicaciones/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/certificacion/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/cursos/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/denuncias/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/eventos/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/general/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/guias/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/herramientas/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/html5/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/ios/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/legislacion/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/libros/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/moviles/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/noticias/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/sitios-web/(.*)$ /post/$1
+RedirectMatch 301 ^/blog/index.php/wcag2-0/(.*)$ /post/$1
