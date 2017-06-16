@@ -213,5 +213,5 @@ function accesibilidadweb_contact_form_submit($form, &$form_state) {
 
   drupal_mail('accesibilidadweb_contact_form', 'tanta_mail', 'david.abad@tantacom.com', $language, $fields, 'customer.service@tantacom.com');
 
-  drupal_set_message(t('El formulario ha sido enviado.'));
+  drupal_set_message(t('Gracias por ponerte en contacto con nosotros, hemos recibido tu consulta. En breve responderemos a tu solicitud..'));
 }
