@@ -1,3 +1,5 @@
+Sitemap: https://accesibilidadweb.com/sitemap.xml
+
 #
 # robots.txt
 #

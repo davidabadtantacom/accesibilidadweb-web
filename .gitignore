@@ -4,3 +4,9 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+
+# Ignore ssh paths
+.well-known
+
+# Ignore google verification files
+googlea53d3762e7639017.html
