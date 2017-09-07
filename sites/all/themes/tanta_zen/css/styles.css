@@ -46,7 +46,7 @@ article.comment{border-bottom: 1px solid #b0b0b0;margin: 10px 0;padding: 10px 0;
       #panel-portada .pane-promo-home .promo h2{margin: 0;}
       #panel-portada .pane-promo-home .promo h2 span{color: white;display: block;}
         #panel-portada .pane-promo-home .promo h2 span a{color: white;display: block;text-decoration: none;}
-      #panel-portada .pane-promo-home .promo .listaEnlaces a{background-color: white;border-radius: 6px;color: #1c1cb2;display: block;font-size: 20px;margin: 0px 15% 20px 15%;padding: 5px 20px;text-align: center;text-decoration: none;width: auto;}
+      #panel-portada .pane-promo-home .promo .listaEnlaces a{background-color: white;border-radius: 6px;color: #1c1cb2;display: block;font-size: 20px;margin: 0px 20% 20px 25%;padding: 5px 20px;text-align: center;text-decoration: none;width: auto;}
   #panel-portada .pane-promociones{padding-bottom: 60px;}
     #panel-portada .pane-promociones .field-name-field-promo-image{margin-bottom: 30px;text-align: center;}
       #panel-portada .pane-promociones .field-name-field-promo-image img{height: auto;max-width: 100px;text-align: center;}
